@@ -15,9 +15,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
     <link rel="alternate" type="application/rss+xml" title="Rod Woods · Field Notes" href="/rss.xml" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content={Astro.url.pathname.startsWith('/posts/') ? 'article' : 'website'} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og-card.png', Astro.site)} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={new URL('/og-card.png', Astro.site)} />
     <style is:global>
       :root {
         --bg: #ffffff; --fg: #1c2733; --muted: #5a6a7a; --accent: #b4552d;
