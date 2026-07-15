@@ -2,7 +2,6 @@
 title: "An LLM ensemble took 59 minutes to miss a bug that regex found in 0.03 seconds"
 description: "For one very common class of continuity bug, two local LLMs and an hour of compute lost to 840 lines of standard-library Python. The lesson generalizes."
 pubDate: 2026-08-03
-draft: true
 ---
 
 I spent a couple of weeks building a system to generate novels with local models. It mostly worked, and I have paused it, and that is a different post. This one is about a single result that came out of it, because the result surprised me and I think it generalizes well past fiction.
@@ -107,7 +106,7 @@ It does not judge prose. It does not rewrite anything. It does not catch every k
 
 What it does, it does exactly, instantly, offline, and for free.
 
-The code is on GitHub under an MIT license. The test suite includes clean public-domain prose that every checker must stay silent on, because silence is the property that matters.
+The code is on GitHub as [throughline](https://github.com/Rodder5/throughline), MIT licensed. The test suite includes clean public-domain prose that every checker must stay silent on, because silence is the property that matters.
 
 If you are building anything that asks a model to reason over scattered facts and produce a number, I would genuinely encourage you to try writing the check in code first. I expected that to be the boring fallback. It turned out to be the answer.
 

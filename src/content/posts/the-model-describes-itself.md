@@ -2,7 +2,6 @@
 title: "Ask an AI to describe a writer's voice and it will describe itself"
 description: "I asked a model to describe a novelist's voice. It gave six confident signature constructions. A grep of 414,000 words of her actual prose found every one of them exactly zero times."
 pubDate: 2026-07-27
-draft: true
 ---
 
 I asked a language model to characterize the prose style of a top-selling novelist. It gave me six signature constructions, confidently, with examples. They were specific enough to be useful and plausible enough that I believed them.
